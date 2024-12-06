@@ -1,3 +1,4 @@
+=======
 import java.io.File;
 import java.io.IOException;
 import javax.sound.sampled.AudioInputStream;
@@ -48,5 +49,4 @@ public class AudioPlayer {
     // Method untuk memutar audio di latar belakang
     public static void playAudioInBackground(String filePath) {
         new Thread(() -> playAudio(filePath)).start();
-    }
 }
