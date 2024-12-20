@@ -147,7 +147,7 @@ public class Othello extends JFrame {
     }
 
 
-    /** Initialize the Game (run once) */
+
     public void initGame() {
         board = new Seed[ROWS][COLS];
     }
@@ -194,7 +194,7 @@ public class Othello extends JFrame {
     }
 
 
-    /** Reset the game-board contents and the status, ready for new game */
+    
     public void newGame() {
         for (int row = 0; row < ROWS; ++row) {
             for (int col = 0; col < COLS; ++col) {
