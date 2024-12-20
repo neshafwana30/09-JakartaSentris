@@ -1,3 +1,5 @@
+package Sudoku;
+
 import javax.swing.JFrame;
 
 public class SudokuMain extends JFrame {
