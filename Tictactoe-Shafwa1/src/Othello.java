@@ -472,7 +472,7 @@ public class Othello extends JFrame {
     }
 
 
-    /** The entry main() method */
+  
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Othello());
     }
