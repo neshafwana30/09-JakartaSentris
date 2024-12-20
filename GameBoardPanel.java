@@ -1,3 +1,5 @@
+package Sudoku;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -225,7 +227,7 @@ public final class GameBoardPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon icon = new ImageIcon("src\\Image\\BG2.png");
+                ImageIcon icon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\BG2.png");
                 g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
         };
@@ -235,11 +237,11 @@ public final class GameBoardPanel extends JPanel {
         // Difficulty buttons
         String[] options = { "Easy", "Normal", "Hard", "Extreme", "Insane" };
         String[] imagePaths = {
-                "src\\Image\\Difficulty\\Easy.png",
-                "src\\Image\\Difficulty\\Normal.png",
-                "src\\Image\\Difficulty\\Hard.png",
-                "src\\Image\\Difficulty\\Extreme.png",
-                "src\\Image\\Difficulty\\Insane.png"
+                "TictactoeExtends\\src\\Sudoku\\Image\\Difficulty\\Easy.png",
+                "TictactoeExtends\\src\\Sudoku\\Image\\Difficulty\\Normal.png",
+                "TictactoeExtends\\src\\Sudoku\\Image\\Difficulty\\Hard.png",
+                "TictactoeExtends\\src\\Sudoku\\Image\\Difficulty\\Extreme.png",
+                "TictactoeExtends\\src\\Sudoku\\Image\\Difficulty\\Insane.png"
         };
 
         panel.add(Box.createVerticalStrut(30));
@@ -439,7 +441,7 @@ public final class GameBoardPanel extends JPanel {
     }
 
     public void incorrectGuess() {
-        AudioPlayer.playAudioInBackground("src\\Image\\Audio\\salah.wav");
+        AudioPlayer.playAudioInBackground("TictactoeExtends\\src\\Sudoku\\Image\\Audio\\salah.wav");
         remainingLives--;
         updateRemainingLives();
         if (remainingLives <= 0) {
@@ -523,7 +525,7 @@ public final class GameBoardPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon icon = new ImageIcon("src\\Image\\BG1.png");
+                ImageIcon icon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\BG1.png");
                 g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
         };
@@ -532,7 +534,7 @@ public final class GameBoardPanel extends JPanel {
 
         panel.add(Box.createVerticalGlue());
 
-        ImageIcon sudokuIcon = new ImageIcon("src\\Image\\Logo.png");
+        ImageIcon sudokuIcon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\Logo.png");
         Image ScaledSudoku = sudokuIcon.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
         ImageIcon scaledSudokuI = new ImageIcon(ScaledSudoku);
 
@@ -543,7 +545,7 @@ public final class GameBoardPanel extends JPanel {
         // Add the label to the panel
         panel.add(SudokuLabel);
 
-        ImageIcon playButton = new ImageIcon("src\\Image\\Play.png");
+        ImageIcon playButton = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\Play.png");
         Image tempScaled = playButton.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         ImageIcon scaledPlay = new ImageIcon(tempScaled);
 
@@ -603,7 +605,7 @@ public final class GameBoardPanel extends JPanel {
 
     public void gameOverPage() {
         AudioPlayer.stopAudio();
-        AudioPlayer.playAudio("src\\Image\\Audio\\gameover.wav");
+        AudioPlayer.playAudio("TictactoeExtends\\src\\Sudoku\\Image\\Audio\\gameover.wav");
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -620,7 +622,7 @@ public final class GameBoardPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                ImageIcon icon = new ImageIcon("src\\Image\\GameOver\\Cover.png");
+                ImageIcon icon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\GameOver\\Cover.png");
                 g.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
             }
         };
@@ -630,7 +632,7 @@ public final class GameBoardPanel extends JPanel {
         panel.add(Box.createVerticalGlue());
 
         // Create ImageIcon for Reset button
-        ImageIcon resetIcon = new ImageIcon("src\\Image\\GameOver\\Reset.png");
+        ImageIcon resetIcon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\GameOver\\Reset.png");
         Image scaledResetImage = resetIcon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         ImageIcon scaledResetIcon = new ImageIcon(scaledResetImage);
 
@@ -654,7 +656,7 @@ public final class GameBoardPanel extends JPanel {
         });
 
         // Create ImageIcon for New Game button
-        ImageIcon gameIcon = new ImageIcon("src\\Image\\GameOver\\NewGame.png");
+        ImageIcon gameIcon = new ImageIcon("TictactoeExtends\\src\\Sudoku\\Image\\GameOver\\NewGame.png");
         Image scaledNewGameImage = gameIcon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         ImageIcon scaledgameIcon = new ImageIcon(scaledNewGameImage);
 
